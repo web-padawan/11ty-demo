@@ -1,0 +1,8 @@
+{
+  "title": "11ty demo",
+  "description": "A demo of using 11ty",
+  "author": {
+    "name": "Serhii Kulykov",
+    "email": "iamkulykov@gmail.com"
+  }
+}

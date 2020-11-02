@@ -1,0 +1,15 @@
+
+<section>
+  <h2 id="{{ section.title }}">
+    {{ section.title }}
+    <a href="#{{ section.hash }}" aria-hidden="true">#</a>
+  </h2>
+
+  {%- for item in section.items -%}
+    <article>
+      <a href="{{ item.url }}">
+        {{ item.title }}
+      </a>
+    </article>
+  {% endfor %}
+</section>

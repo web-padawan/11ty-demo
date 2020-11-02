@@ -1,0 +1,28 @@
+{
+  "name": "11ty-demo",
+  "private": true,
+  "description": "A demo of using 11rt",
+  "author": {
+    "name": "Serhii Kulykov",
+    "email": "iamkulykov@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:scss": "node-sass -r --output-style compressed src/styles/index.scss -o dist",
+    "build:eleventy": "eleventy",
+    "watch:scss": "yarn build:scss && yarn build:scss -w",
+    "watch:eleventy": "eleventy --watch",
+    "start": "node ./server.js",
+    "build": "yarn clean && npm-run-all -r --parallel build:*",
+    "dev": "yarn clean && npm-run-all -r --parallel watch:* start"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

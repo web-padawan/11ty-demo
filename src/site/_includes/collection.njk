@@ -1,0 +1,17 @@
+---
+layout: layout
+---
+
+<div class="wrapper">
+  <h1>{{ title }}</h1>
+
+  {%- if description -%}
+  <blockquote>{{ description }}</blockquote>
+  {%- endif -%}
+
+  <section>
+    {% for section in sections %}
+      {% include 'partials/section.njk' %}
+    {% endfor %}
+  </section>
+</div>
